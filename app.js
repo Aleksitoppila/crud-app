@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 // CREATING EXPRESS APP, SETTING PORT
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 // MIDDLEWARE FOR JSON PARSE
 app.use(express.json());
 
@@ -39,7 +39,7 @@ mongoose.connect(process.env.DATABASE_URL)
 
 
 
-// LISTEN SERVER AT PORT 3000
+// LISTEN SERVER AT PORT -- Default 10000
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`)
 });
