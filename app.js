@@ -1,5 +1,5 @@
 // REQUIRE DOTENV CONFIG
-require('dotenv/config');
+require('dotenv').config();
 
 // IMPORTS
 const express = require('express');
