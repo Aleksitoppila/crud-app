@@ -1,0 +1,17 @@
+/* FOOTER STYLING */
+.footer {
+    color: #F4EAE6;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 16px;
+    user-select: none;
+    margin-top: auto;
+}
+
+#div-line {
+    margin-bottom: 25px;
+    width: 300px;
+    justify-self: center;
+    border-top: 3px solid #ffffff;
+}

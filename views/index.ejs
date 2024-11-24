@@ -1,0 +1,85 @@
+<!-- index.ejs -->
+<main class="main">
+    <h1>Project Dashboard</h1>
+
+    <!-- ADD, EDIT AND DELETE BUTTONS -->
+    <div id="action-buttons">
+        <button class="refresh-Btn" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="12" height="12">
+                <path d="M12,2a10.032,10.032,0,0,1,7.122,3H16a1,1,0,0,0-1,1h0a1,1,0,0,0,1,1h4.143A1.858,1.858,0,0,0,22,5.143V1a1,1,0,0,0-1-1h0a1,1,0,0,0-1,1V3.078A11.981,11.981,0,0,0,.05,10.9a1.007,1.007,0,0,0,1,1.1h0a.982.982,0,0,0,.989-.878A10.014,10.014,0,0,1,12,2Z"/>
+                <path d="M22.951,12a.982.982,0,0,0-.989.878A9.986,9.986,0,0,1,4.878,19H8a1,1,0,0,0,1-1H9a1,1,0,0,0-1-1H3.857A1.856,1.856,0,0,0,2,18.857V23a1,1,0,0,0,1,1H3a1,1,0,0,0,1-1V20.922A11.981,11.981,0,0,0,23.95,13.1a1.007,1.007,0,0,0-1-1.1Z"/>
+            </svg>
+        </button>
+        <button id="add-project-btn">Add</button>
+        <button id="edit-project-btn" disabled>Edit</button>
+        <button id="delete-project-btn" disabled>Delete</button>
+    </div>
+
+    <!-- TABLE FOR LISTED PROJECTS -->
+    <div id="projects-table-wrapper">
+        <table id="projects-table">
+            <thead>
+                <tr>
+                    <th>ID
+                        <input  type="text" 
+                                id="search-project-id"
+                                placeholder="Search by ID">
+                    </th>
+                    <th>Project Name
+                        <input  type="text" 
+                                id="search-project-name" 
+                                placeholder="Search by Name">
+                    </th>
+                    <th>Description
+                        <input  type="text" 
+                                id="search-project-description" 
+                                placeholder="Search by Description">
+                    </th>
+                    <th>Post Date
+                        <input  type="text" 
+                                id="search-project-date" 
+                                placeholder="Search by Post Date">
+                    </th>
+                    <th>Contributor
+                        <input  type="text" 
+                                id="search-project-contributor" 
+                                placeholder="Search by Contributor">
+                    </th>
+                    <th>Link
+                        <input  type="text" 
+                                id="search-project-link" 
+                                placeholder="Search by Link" 
+                                disabled> <!-- DISABLED -->
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="projects-body">
+                <!-- PROJECTS WILL BE LISTED HERE -->
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<!-- MODAL FOR ADDING AND EDITING PROJECTS -->
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <h3 id="modal-title">Add New Project</h3>
+        <form id="project-form">
+            <input type="hidden" id="project-id" name="id">
+            <label for="projectName">Project Name</label>
+            <input type="text" id="projectName" name="projectName" required>
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="contributor">Contributor</label>
+            <input type="text" id="contributor" name="contributor" required>
+            <label for="projectLink">Project Link</label>
+            <input type="url" id="projectLink" name="projectLink" required>
+            <label for="postDate">Date</label>
+            <input type="date" id="postDate" name="postDate" required>
+            <button type="submit">Save</button>
+        </form>
+        <button id="close-modal-btn">Close</button>
+    </div>
+</div>
+
+<script src="../js/events.js"></script>
